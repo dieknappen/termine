@@ -1,0 +1,9 @@
+"S25hcHBlbg==" = Knappen = General
+"SGVycmVuMSYy" = Herren1&2 = Herren
+"VTE5U0dU" = U19SGT = A-Jugend
+"VTE3U1NHSA==" = U17SSGH = B-Jugend
+"Q0pTR0g=" = CJSGH = C-Jugend
+"VTEzSFM=" = U13HS = D-Jugend
+"RUpTR0g=" = EJSGH = E-Jugend
+"VTdLTlA=" = U7KNP = F-Jugend
+"S25CYW0=" = KnBam = Bambini

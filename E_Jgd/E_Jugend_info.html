@@ -14,7 +14,9 @@
     </div>
     <hr/>
     <h2>Kalender</h2>
-    <iframe width="1024" height="512" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/bf0ca513c26fee1e/IQREQs855hBsTK7yEb7EWpyIAcUv_AXtlNoK1ZIM0Ou7scc?em=2&ActiveCell='Tabelle1'!B2&wdHideHeaders=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+    <button id="loginBtn">Spielerliste freischalten</button>
+    <br>
+    <iframe id="playerList" style="visibility:hidden" width="1024" height="512" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/bf0ca513c26fee1e/IQREQs855hBsTK7yEb7EWpyIAcUv_AXtlNoK1ZIM0Ou7scc?em=2&ActiveCell='Tabelle1'!B2&wdHideHeaders=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
     <hr/>
     <ul style="list-style-type:none;">
         <li>
@@ -114,4 +116,26 @@
     </p>
     <hr/>
   </body>
+  <script>
+    document.getElementById("loginBtn").onclick = function() {
+            let encGen = "S25hcHBlbg==";
+            let encSt = "RUpTR0g=";
+            // Prompt user for username
+            let code = window.prompt("Gib den Freischaltcode ein:");
+
+            if (code === null || code === "") {
+                return;
+            }
+
+            let encodedCode = window.btoa(code);
+
+            // Simple validation (this could be expanded)
+            if (encodedCode === encGen || encodedCode === encSt) {
+                alert("Login successful!");
+                document.getElementById("playerList").style.visibility = 'visible';
+            } else {
+                alert("Invalid username or password.");
+            }
+        };
+  </script>
 </html>
